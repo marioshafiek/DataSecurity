@@ -10,7 +10,45 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            int length = plainText.Length;
+            char[] keyMap = new char[26];
+            int[] usedChars = new int[30];
+            for (int i = 0; i < 26; i++)
+            {
+                keyMap[i] = '*';
+                usedChars[i] = 0;
+            }
+            for (int i = 0; i < length; i++)
+            {
+                int index = plainText[i] - 'a';
+                keyMap[index] = cipherText[i];
+                usedChars[cipherText[i] - 'A'] = 1;
+            }
+            string key = "";
+            string unUsedChars = "";
+            for (int i = 0; i < 26; i++)
+            {
+                if (usedChars[i] == 0)
+                {
+                    unUsedChars += (char)(i + 'a');
+                }
+            }
+            int unUsedCharsIndex = 0;
+            for (int i = 0; i < 26; i++)
+            {
+                if (keyMap[i] != '*')
+                {
+                    key += keyMap[i];
+                }
+                else
+                {
+                    key += unUsedChars[unUsedCharsIndex];
+                    unUsedCharsIndex++;
+                }
+
+            }
+
+            return key.ToLower();
         }
 
         public string Decrypt(string cipherText, string key)
@@ -95,9 +133,51 @@ namespace SecurityLibrary
         /// </summary>
         /// <param name="cipher"></param>
         /// <returns>Plain text</returns>
+        
         public string AnalyseUsingCharFrequency(string cipher)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            string frequency = "zqjxkvbywgpfmucdlhrsnioate";
+
+
+            cipher = cipher.ToLower();
+
+            //dictonary for counter
+            Dictionary<char, int> counting = new Dictionary<char, int>();
+
+            //dictonary for keys
+            Dictionary<char, char> keys = new Dictionary<char, char>();
+
+          
+            for (int i = 0; i < cipher.Length; i++)
+            {
+                if (!counting.ContainsKey(cipher[i]))
+                {
+                    counting[cipher[i]] = 0;
+                }
+                counting[cipher[i]]++;
+            }
+
+            int it = 0;
+           
+
+            foreach (KeyValuePair<char, int> item in counting.OrderBy(key => key.Value))
+            {
+                keys[item.Key] = frequency[it];
+                it++;
+            }
+
+            string final = string.Empty;
+
+            for (int i = 0; i < cipher.Length; i++)
+            {
+                final += keys[cipher[i]];
+            }
+            return final;
         }
     }
 }
+
+    
+

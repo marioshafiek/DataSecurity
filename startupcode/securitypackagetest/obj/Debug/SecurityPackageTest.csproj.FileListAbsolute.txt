@@ -32,3 +32,12 @@ D:\Data Security\Security Package-20220313T181016Z-001\Security Package\startupc
 D:\Data Security\Security Package-20220313T181016Z-001\Security Package\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 D:\Data Security\Security Package-20220313T181016Z-001\Security Package\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 D:\Data Security\Security Package-20220313T181016Z-001\Security Package\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
