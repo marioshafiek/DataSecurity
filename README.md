@@ -5,9 +5,11 @@
 # AES
 
 ## Mario
-Block to state
-subBytes
-shiftRows
+Block to state - 
+subBytes - 
+shiftRows - 
+Convert Matrix from Binary To Hexa - 
+Convert Matrix from Hexa to Binary
 ## Samar Hossam 
 Add Round key 
 ## Perry 
