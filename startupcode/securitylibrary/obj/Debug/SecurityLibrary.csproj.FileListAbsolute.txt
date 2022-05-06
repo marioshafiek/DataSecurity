@@ -26,3 +26,9 @@ C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityLibrary\ob
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityLibrary\obj\Debug\SecurityLibrary.pdb

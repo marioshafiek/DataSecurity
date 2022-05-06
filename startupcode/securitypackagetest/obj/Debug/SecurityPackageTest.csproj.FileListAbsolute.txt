@@ -41,3 +41,12 @@ C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTes
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 C:\Users\user\Documents\DataSecurity\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\Mario\Documents\Git Hub\DataSecurity\startupcode\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb

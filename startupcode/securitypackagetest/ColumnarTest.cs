@@ -19,6 +19,7 @@ namespace SecurityPackageTest
         string mainPlain4 = "computersciencex";
 
         string mainCipher3 = "ctipscoeemrnuce".ToUpper();
+                              
         string mainCipher4 = "cusnpremeieotcc".ToUpper();
         string mainCipher5 = "cusnprexmeieotcc".ToUpper();
 
