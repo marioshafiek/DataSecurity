@@ -13,7 +13,7 @@ Convert Matrix from Hexa to Binary
 ## Samar Hossam 
 Add Round key 
 ## Perry 
-Mix Columns
-Generate Round Keys
-integrate Encrypt Function
+Mix Columns -
+Generate Round Keys - 
+integrate Encrypt Function - 
 Decrypt Function
