@@ -61,28 +61,67 @@ namespace SecurityLibrary.AES
                 { 'e', "1110" },
                 { 'f', "1111" } 
 };
+
         //Convert From Binary TO HexaDecimal
-        string HexConverted(string strBinary)
+        string HexConvertedToBinary(string strBinary)
         {
             string strHex = Convert.ToInt32(strBinary, 2).ToString("X");
             return strHex;
         }
-        //Conver Matrix from HexaToBinary
+        //Convert Matrix from HexaToBinary
         public string[,] ToBinary(string[,] Hexa)
         {
-
+            for(int i=0;i<4;i++)
+            {
+                for(int j=0;j<4;j++)
+                {
+                    string s = Hexa[i,j];
+                    string a = hexCharacterToBinary[s[0]];
+                    string b = hexCharacterToBinary[s[1]];
+                    string sum = a + b;
+                    Hexa[i,j] = sum;
+                }
+            }
+            return Hexa;
         }
         //Conver Matrix from BinaryToHexa
         public string[,] ToHexa(string[,] Binary)
         {
-
+            for(int i=0; i<4;i++)
+            {
+                for(int j=0;j<4;j++)
+                {
+                    string value = Binary[i, j];
+                    Binary[i,j] = HexConvertedToBinary(value);
+                }
+            }
+            return Binary; 
         }
 
         //Convert cipherText&cipherKey from blocks to Martix
-        //Mario
+        //Mario-->Done
         public void BlockToState(string PlainTxt, string cipherKey)
         {
-            
+            //ADD Plain text to Matrix (PlainTextMatrix)
+            int k = 2;
+            for(int i=0;i<4;i++)
+            {
+                for(int j=0;j<4;j++)
+                {
+                    PlainTextMatrix[j,i] = PlainTxt[k].ToString()+PlainTxt[k+1].ToString();
+                    k += 2;
+                }
+            }
+            //ADD Cipher Key to Matrix (CipherKeyMatrix)
+            int l = 2;
+            for(int m=0;m<4;m++)
+            {
+                for(int n=0;n<4;n++)
+                {
+                    CipherKeyMatrix[n, m] = cipherKey[l].ToString() + cipherKey[k + 1].ToString();
+                    l += 2;
+                }
+            }
         }
 
         //PlainText XOR CipherKey
@@ -97,9 +136,40 @@ namespace SecurityLibrary.AES
         //Convert Each value with SBox
         //Take the array with comes from AddRoundKey
         //Mario
+        public static readonly Dictionary<string, int> HexaNumbers = new Dictionary<string, int>
+        {
+            {"A",11},
+            {"B",12},
+            {"C",13},
+            {"D",14},
+            {"E",15},
+            {"F",16}
+
+        };
+        public int ReturnNumberForsBox(string n)
+        {
+            if(n=="A"|| n == "B" || n == "C" || n == "D" || n == "E" || n == "E" || n == "F")
+            {
+                return HexaNumbers[n];
+            }
+            else
+            {
+               return Int32.Parse(n);
+            }
+        }
         public string[,] SubBytes(string[,] RoundKeyState)
         {
-
+            for(int i=0;i<4;i++)
+            {
+                for(int j=0;j<4;j++)
+                {
+                    string s = (RoundKeyState[i, j]);
+                    int n1 = ReturnNumberForsBox(s[0].ToString());
+                    int n2 = ReturnNumberForsBox(s[1].ToString());
+                    RoundKeyState[i,j] = sBox[n1,n2].ToString();
+                }
+            }
+            return RoundKeyState;
         }
 
         //ShiftRows
@@ -111,6 +181,58 @@ namespace SecurityLibrary.AES
         //Mario
         public string[,] ShiftRows(string[,] SubBytesState)
         {
+            //Shift Row 2
+            //Shift 1 Time
+            string[] Row2 = new string[4];
+            string[] Row2Extend = new string[4];
+            for(int i=0;i<4;i++)
+            {
+                Row2[i] = SubBytesState[1, i];
+            }
+            for(int i=0;i<4;i++)
+            {
+                Row2Extend[i] = Row2[(i+1)%4];
+            }
+            for(int i=0;i<4;i++)
+            {
+                SubBytesState[1, i] = Row2Extend[i];
+            }
+
+            //Shift Row 3
+            //Shift 2 Times
+            string[] Row3 = new string[4];
+            string[] Row3Extend = new string[4];
+            for (int i = 0; i < 4; i++)
+            {
+                Row3[i] = SubBytesState[2, i];
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                Row3Extend[i] = Row2[(i + 2) % 4];
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                SubBytesState[2, i] = Row3Extend[i];
+            }
+
+            //Shift Row 4
+            //Shift 3 Times
+            string[] Row4 = new string[4];
+            string[] Row4Extend = new string[4];
+            for (int i = 0; i < 4; i++)
+            {
+                Row4[i] = SubBytesState[3, i];
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                Row4Extend[i] = Row2[(i + 3) % 4];
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                SubBytesState[3, i] = Row4Extend[i];
+            }
+
+            return SubBytesState;
 
         }
 
