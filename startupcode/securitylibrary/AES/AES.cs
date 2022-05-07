@@ -127,10 +127,36 @@ namespace SecurityLibrary.AES
         //PlainText XOR CipherKey
         //Convert PlainText and CipherKey to Binary first
         //Samar Hossam 
-
-        public string[,] AddRoundKey(string[,] TextMatrix,string[,] KeyMatrix)
+        //Made By Mario
+        public string XOR(string a,string b)
         {
-            
+            //0001 1100
+            string sum= "";
+            for(int i=0; i<4;i++)
+            {
+                if (a[i] != b[i])
+                {
+                    sum += '1';
+                }
+                else
+                    sum += '0';
+            }
+            return sum; 
+        }
+
+        public string[,] AddRoundKey()
+        {
+            string[,] MatrixForPlainBinary = ToBinary(PlainTextMatrix);
+            string[,] MatrixForKeyBinary = ToBinary(CipherKeyMatrix);
+            string[,] MatrixForXOR = new string[4, 4];
+            for(int i=0; i<4; i++)
+            {
+                for(int j=0; j<4;j++)
+                {
+                    MatrixForXOR[i,j] = XOR(MatrixForPlainBinary[i,j],MatrixForKeyBinary[i,j]);
+                }
+            }
+            return MatrixForXOR;
         }
 
         //Convert Each value with SBox
